@@ -9,14 +9,14 @@ echo "Please Your Intranet IP"
 read -p "Intranet IP： " ip
 cp /root/pubgradar/restart.sh /root/restart.sh
 chmod +x restart.sh
-wget --no-check-certificate -O shadowsocks-all.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh
+wget --no-check-certificate -O shadowsocks-all.sh https://github.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh
 chmod +x shadowsocks-all.sh
 ./shadowsocks-all.sh 2>&1 | tee shadowsocks-all.log
 
 echo "SS OK!，Remember relevant information"
 read -p "OK? Enter!" 
 
-curl https://raw.githubusercontent.com/creationix/nvm/v0.13.1/install.sh | bash
+curl https://github.com/creationix/nvm/v0.13.1/install.sh | bash
 source ~/.bash_profile
 nvm install v9.8.0
 nvm alias default v9.8.0
@@ -30,7 +30,7 @@ cd libpcap-1.8.1
 make
 make install
 
-git clone https://github.com/hacklele/webpubg.git
+git clone https://github.com/mudehai/webpubg.git
 cd pubgradar/
 npm i
 npm i -g pino
